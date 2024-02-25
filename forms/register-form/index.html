@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form class="register" onsubmit="handleRegister(event)">
+        <h3 class="form-head">Registration form</h3>
+        <div class="form-group">
+            <label>Fullname</label>
+            <input type="text" id="fullname" placeholder="E.g: oviya suresh" autocomplete="off"/>
+        </div>
+        <div class="form-group">
+            <label>DOB</label>
+            <input type="date" id="dob" />
+        </div>
+        <div class="form-group">
+            <label>Gender</label>
+            <div class="checkbox-group">
+                <input type="radio" id="female" name="gender" checked>
+                <label for="female">Female</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="radio" id="male" name="gender">
+                <label for="male">Male</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Address:</label>
+            <textarea id="address" rows="4" cols="40" autocomplete="off" placeholder="E.g:No:5, Main street, Trincomalee"></textarea>
+        </div>
+        <div class="form-group">
+            <label>email</label>
+            <input type="email" id="email" placeholder="abc@gmail.com" autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label>Qualification</label>
+            <div class="select-group">
+                <select id="qualification">
+                    <option>select a qualification</option>
+                    <option>B.Tech</option>
+                    <option>BCom</option>
+                    <option>BBA</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Resume</label>
+            <input type="file" id="resume">
+        </div>
+        <div class="form-group-button">
+            <button type="submit">Register</button>
+        </div>
+    </form>
+
+    <div id="output" style="display: none;"></div>
+
+    <script>
+        function handleRegister(event) {
+            event.preventDefault();
+
+            const fullname = document.getElementById("fullname").value;
+            const dob = document.getElementById("dob").value;
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+            const address = document.getElementById("address").value;
+            const email = document.getElementById("email").value;
+            const qualification = document.getElementById("qualification").value;
+            const resume = document.getElementById("resume").value;
+
+            const outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = `
+                <h4 class="form-head">Registration Details</h4>
+                <p><strong>Fullname:</strong> ${fullname}</p>
+                <p><strong>DOB:</strong> ${dob}</p>
+                <p><strong>Gender:</strong> ${gender}</p>
+                <p><strong>Address:</strong> ${address}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Qualification:</strong> ${qualification}</p>
+                <p><strong>Resume:</strong> ${resume}</p>
+            `;
+            outputDiv.style.display="block"
+        }
+    </script>
+</body>
+
+</html>

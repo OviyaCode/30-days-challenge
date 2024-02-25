@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    /* background: linear-gradient(60deg, #0F52BA,#A7C7E7); */
+    background-image: url("./bg-image.jpg");
+    object-fit: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.register{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width:fit-content;
+    height: fit-content;
+    background: #ffffffc3;
+    border-radius: .2em;
+    margin: 70px auto;
+    padding: 2em 3em;
+    gap: 1em;
+}
+
+.register .form-head{
+    text-align: center !important;
+    width: 100%;
+    color: #0F52BA;    
+}
+
+.register .form-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register .form-group label{
+    width: 100px;
+    margin-right: 10px;
+}
+
+.register .form-group input{
+    cursor: pointer;
+}
+.register .form-group input[type="text"], .register .form-group input[type="email"]{
+    padding: 5px;
+    width: 300px;
+}
+
+.register .form-group textarea{
+    padding: .5em;
+    width: 300px;
+}
+.register .form-group textarea{
+    outline: none !important;
+}
+
+.register .form-group textarea:focus{
+    border: 1px solid #0f92ea;
+}
+
+.register .form-group select{
+    width: 300px;
+}
+
+.register .form-group input, textarea, select, input[type="file"], button{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.register .form-group button{
+    display: inline;
+    background: #058436;
+    padding: 1em 1.5em;
+    margin: auto 5px;
+    border-radius: 25px;
+    color: #f2f2f2;
+}
+
+.register .form-group input:focus, .register:focus .form-group textarea:focus .register .form-group select:focus{
+    outline: none !important;
+    border: 1px solid #0f92ea;
+}
+
+.form-group-button{
+    display: flex;
+    width: 100%;
+    padding: 1em;
+    gap: 3em;
+    justify-content: center;
+}
+.form-group-button button{
+    border:1px solid #08b8e4;
+    padding: 1em 1.5em;
+    border-radius: 25px;
+    color: #08b8e4;
+    font-weight: 700;
+    cursor: pointer;
+    width: 75%;
+    transition: all .4s ease-in-out;
+    background-color: transparent;
+}
+
+.form-group-button button:hover{
+    background: rgb(7, 85, 219);
+    color: #f2f2f2;
+    padding: 1.2em 1.7em;
+}
+
+#output{
+    background: #f2f2f2;
+    padding: 2em;
+    margin: auto 30px;
+    border-radius: 10px;
+}
